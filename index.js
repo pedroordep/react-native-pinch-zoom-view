@@ -53,8 +53,8 @@ export default class PinchZoomView extends Component {
   _handleMoveShouldSetPanResponder = (e, gestureState) => {
     return (
       this.props.scalable &&
-      (Math.abs(gestureState.dx) > 2 ||
-        Math.abs(gestureState.dy) > 2 ||
+      (Math.abs(gestureState.dx) > 100 ||
+        Math.abs(gestureState.dy) > 100 ||
         gestureState.numberActiveTouches === 2)
     );
   };
